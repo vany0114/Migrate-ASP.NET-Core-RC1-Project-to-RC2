@@ -1,0 +1,57 @@
+﻿<div class="container-fluid">
+    <div>
+        <div class="table-responsive">
+            <table class="table table-striped" id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <button class="btn btn-primary reply-button" data-ng-click="add()">Add Parking Lot</button>
+                        </th>
+                        <th colspan="4" class="text-left">
+                            <h2>Parking Lots</h2>
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <h3>Name</h3>
+                    </td>
+                    <td class="text-right">
+                        <h3>Private Spaces</h3>
+                    </td>
+                    <td class="text-right">
+                        <h3>Public Spaces</h3>
+                    </td>
+                    <td class="text-right">
+                        <h3>Bike Spaces</h3>
+                    </td>
+                    <td class="text-right">
+                        <h3>Gates</h3>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+                <tr data-ng-repeat="i in parkingLots | orderBy: 'name': true">
+                    <td>
+                        <a data-ng-href="#/editParkingLot/{{ i.id }}">{{ i.name }}</a>
+                    </td>
+                    <td class="text-right">
+                        {{ i.privateSpaces }}
+                    </td>
+                    <td class="text-right">
+                        {{ i.publicSpaces }}
+                    </td>
+                    <td class="text-right">
+                        {{ i.bikeSpaces }}
+                    </td>
+                    <td class="text-right">
+                        {{ i.gates }}
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger" ng-click="delete(i.id)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

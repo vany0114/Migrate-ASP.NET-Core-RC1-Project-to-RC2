@@ -1,0 +1,39 @@
+﻿<form name="editParkingLot" novalidate data-ng-submit="save()">
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <h3>Parking Lot</h3>
+            <fieldset>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="ame" value="" placeholder="Input a name."
+                           data-ng-model="parkingLot.name" required />
+                    <span class="error" data-ng-show="parkingLot.name.$error.required">*</span>
+                </div>
+                <div class="form-group">
+                    <label for="privateSpaces">Private Spaces</label>
+                    <input type="number" class="form-control" name="privateSpaces" value="" placeholder="Input a private spaces."
+                           data-ng-model="parkingLot.privateSpaces" required />
+                </div>
+                <div class="form-group">
+                    <label for="publicSpaces">Public Spaces</label>
+                    <input type="number" class="form-control" name="publicSpaces" value="" placeholder="Input a public spaces."
+                           data-ng-model="parkingLot.publicSpaces" required />
+                </div>
+                <div class="form-group">
+                    <label for="bikeSpaces">Bike Spaces</label>
+                    <input type="number" class="form-control" name="bikeSpaces" value="" placeholder="Input a bike spaces."
+                           data-ng-model="parkingLot.bikeSpaces" required />
+                </div>
+                <div class="form-group">
+                    <label for="gates">Gates</label>
+                    <input type="number" class="form-control" name="gates" value="" placeholder="Input a gates."
+                           data-ng-model="parkingLot.gates" required />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary reply-button" value="save" data-ng-disabled="editParkingLot.$invalid">Save</button>
+                    <button class="btn btn-default" data-ng-click="back()">Cancel</button>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>
