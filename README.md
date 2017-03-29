@@ -189,8 +189,8 @@ These are some changes what I faced when I was migrating the project:
   {
       // adds json file to environment.
       IConfigurationBuilder configurationBuilder = new ConfigurationBuilder(env.ApplicationBasePath)
-     .AddJsonFile("config.json")
-     .AddEnvironmentVariables();
+	     .AddJsonFile("config.json")
+	     .AddEnvironmentVariables();
 
       configuration = configurationBuilder.Build();
   }
